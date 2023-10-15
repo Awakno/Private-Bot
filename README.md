@@ -17,14 +17,20 @@ Ce bot Discord personnalisé est un projet open-source conçu pour vous aider à
 2. Clonez ce référentiel sur votre ordinateur.
 3. Installez les dépendances en utilisant `pip install -r requirements.txt`.
 4. Créez un fichier `config.json` et ajoutez-y vos clés API et d'autres configurations (voir ci-dessous).
-5. Exécutez le bot en utilisant `python bot.py`.
+5. Exécutez le bot en utilisant `python main.py`.
 
 ## Configuration
 Créez un fichier `config.json` dans le répertoire du bot avec les détails de configuration suivants :
 
 ```json
 {
-    "token": "YOUR_BOT_TOKEN_HERE",
-    "prefix": "!",
-    "owner_id": "YOUR_DISCORD_USER_ID"
+    "token": "Your token",
+    "prefix": "$",
+    "lang": "en",
+    
+    "owner": [
+        "Owner bot"
+    ],
+    "logs_channel": "Channel logs"
 }
+
