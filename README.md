@@ -7,10 +7,9 @@
 Ce bot Discord personnalisé est un projet open-source conçu pour vous aider à démarrer avec votre propre bot Discord. Il est basé sur la bibliothèque discord.py (rewrite version) en Python. Vous pouvez l'utiliser comme base pour développer des fonctionnalités supplémentaires ou le personnaliser selon vos besoins.
 
 ## Fonctionnalités
-- Commandes personnalisées
-- Gestion de la présence du bot
-- Événements de base (messages, membres, rôles)
-- Structure modulaire
+- Modération
+- Logs
+- commande utilitaire
 
 ## Installation
 1. Assurez-vous d'avoir Python 3.8 ou une version ultérieure installée.
@@ -33,4 +32,7 @@ Créez un fichier `config.json` dans le répertoire du bot avec les détails de 
     ],
     "logs_channel": "Channel logs"
 }
+```
+## Besoin d'aide ?
+Rejoins le support [Discord]("https://discord.gg/ZUFb892bdZ")
 
