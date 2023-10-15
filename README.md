@@ -34,5 +34,6 @@ Créez un fichier `config.json` dans le répertoire du bot avec les détails de 
 }
 ```
 ## Besoin d'aide ?
-Rejoins le support ![[Discord]]("https://discord.gg/ZUFb892bdZ")
+Rejoins le support 
+![[Discord]]("https://discord.gg/ZUFb892bdZ")
 
