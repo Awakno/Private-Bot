@@ -1,0 +1,11 @@
+{
+    "token": "Your token",
+    "prefix": "$",
+    "lang": "en",
+    
+
+    "owner": [
+        "Owner bot"
+    ],
+    "logs_channel": "Channel logs"
+}
