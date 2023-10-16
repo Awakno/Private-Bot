@@ -1,11 +1,11 @@
 {
-    "token": "Your token",
+    "token": "MTE2MjA0MDQxNDg2MjMyMzc3Mw.GeGez8.wHc-btCUKTj5lWIge3NCAXuRgq0EGalAzUhzno",
     "prefix": "$",
-    "lang": "en",
+    "lang": "fr",
     
 
     "owner": [
-        "Owner bot"
+        1120654551331131452
     ],
-    "logs_channel": "Channel logs"
+    "logs_channel": 1163404583377313845
 }
