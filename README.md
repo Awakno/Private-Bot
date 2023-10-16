@@ -19,7 +19,8 @@ Ce bot Discord personnalisé est un projet open-source conçu pour vous aider à
 5. Exécutez le bot en utilisant `python main.py`.
 
 ## Configuration
-Créez un fichier `config.json` dans le répertoire du bot avec les détails de configuration suivants :
+- Si vous voulez désactiver des commandes / fonctionnalité, renommez le nom du fichier avec un "-" devant celui ci
+- Créez un fichier `config.json` dans le répertoire du bot avec les détails de configuration suivants :
 
 ```json
 {
