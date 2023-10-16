@@ -13,11 +13,14 @@ bot = commands.Bot(command_prefix=config['prefix'],intents=discord.Intents.all()
 if  'fr' == config['lang'] :
     for j in os.listdir("./cogs/FR"):
         if j.endswith(".py"):
-            bot.load_extension(f"cogs.FR.{j[:-3]}")
+            if not j.startswith("-"):
+
+                bot.load_extension(f"cogs.FR.{j[:-3]}")
 if config['lang'] == "en":
     for j in os.listdir("./cogs/EN"):
         if j.endswith(".py"):
-            bot.load_extension(f"cogs.EN.{j[:-3]}")
+            if j.startswith("-"):
+                bot.load_extension(f"cogs.EN.{j[:-3]}")
 
 
 
