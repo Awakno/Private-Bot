@@ -23,7 +23,7 @@ if config['lang'] == "en":
                 bot.load_extension(f"cogs.EN.{j[:-3]}")
 
 
-
+########
 
 
 bot.run(config['token'])
