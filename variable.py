@@ -10,7 +10,12 @@ def formatter(message,membre: discord.Member=None, server=None):
             "{user.avatar}": str(membre.display_avatar),
             "{user.mention}": str(membre.mention),
             "{user.name}": str(membre.name),
-        }
+            "{user.badges}": str(membre.public_flags.all()),
+            "{user.create_account}": membre.created_at.strftime(" %d/%m/%Y %H:%M:%S"),
+            "{user.create_account.timestamp}": str(round(membre.created_at.timestamp())),
+            "{user.join_server}": str(membre.joined_at.strftime("%d/%m/%Y %H:%M:%S")),
+            "{user.join_server.timestamp}": str(round(membre.joined_at.timestamp())),
+        }       
     if server:    
         guild_variable = {
             "{guild.name}": str(membre.guild.name),

@@ -16,7 +16,7 @@ class Welcome(commands.Cog):
 
     @commands.Cog.listener()
     async def on_member_join(self, member):
-        with open("config.json","r") as f:
+        with open("config.json","r",encoding="utf-8") as f:
             config = json.load(f)
         if config['welcome']['activate'] == "y":
             welcome_channel = self.bot.get_channel(int(config['welcome']['channel']))
