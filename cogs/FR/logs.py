@@ -8,8 +8,10 @@ class LogEvents(commands.Cog):
         self.bot = bot
         f = open("config.json", "r")
         config = json.load(f)
-        self.log_channel_id = int(config['logs_channel'])   # Remplacez ceci par l'ID du canal de logs
-
+        if config['logs']['activate'] == "y":
+            self.log_channel_id = int(config['logs']['channel'])   # Remplacez ceci par l'ID du canal de logs
+        else:
+            self.log_channel_id = None
     @commands.Cog.listener()
     async def on_ready(self):
         log_channel = self.bot.get_channel(self.log_channel_id)

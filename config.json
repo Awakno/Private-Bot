@@ -7,12 +7,15 @@
     "owner": [
         
     ],
-    
-    "logs_channel": "channel ID",
+    "logs": {
+        "activate": "n",
+        "channel": "channel ID"
+    },
+     
     "welcome": {
-        "activate": "y",
+        "activate": "n",
         "embeds": "y",
-        "channel": "channel ID",
+        "channel": "CHANNEL ID",
         "message": "Bienvenue {user.mention}",
         "embed": {
             "title": "Bienvenue {user.name}",
@@ -26,7 +29,7 @@
 
             ],
             "footer": "Tu es notre {guild.membercount} membres",
-            "color": "0x00ff00",
+            "color": "#FF0000",
             "footer-url": "{guild.icon}" 
 
         }
