@@ -24,14 +24,42 @@ Ce bot Discord personnalisé est un projet open-source conçu pour vous aider à
 
 ```json
 {
-    "token": "Your token",
+    "token": "TOKEN",
     "prefix": "$",
-    "lang": "en",
+    "lang": "fr",
     
+
     "owner": [
-        "Owner bot"
+        
     ],
-    "logs_channel": "Channel logs"
+    "logs": {
+        "activate": "n",
+        "channel": "channel ID"
+    },
+     
+    "welcome": {
+        "activate": "n",
+        "embeds": "y",
+        "channel": "CHANNEL ID",
+        "message": "Bienvenue {user.mention}",
+        "embed": { // Configuration du embed
+            "title": "Bienvenue {user.name}",
+            "description": "Bienvenue sur le serveur {guild.name}",
+            "author": "Private-Bot",
+            "author_avatar": "",
+            "thumbnail": "{user.avatar}",
+                "fields": [
+                    {"name": "Example", "value": "Example", "inline": true}
+                    
+
+            ],
+            "footer": "Tu es notre {guild.membercount} membres",
+            "color": "#FF0000",
+            "footer-url": "{guild.icon}" 
+
+        }
+
+    }
 }
 ```
 ## Besoin d'aide ?
