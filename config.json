@@ -21,9 +21,9 @@
     },
      
     "welcome": {
-        "activate": "y",
+        "activate": "n",
         "embeds": "n",
-        "channel": 1163191742435168438,
+        "channel": "channel ID",
         "message": "Bienvenue {user.mention} ! comment tu vas ?",
         "embed": {
             "title": "Bienvenue {user.name}",
