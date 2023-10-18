@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-class kick(discord.Cog):
+class kick(commands.Cog):
     def __init__(self, bot):
         super().__init__()
         self.bot = bot

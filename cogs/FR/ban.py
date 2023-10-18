@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-class Ban(discord.Cog):
+class Ban(commands.Cog):
     def __init__(self, bot):
         super().__init__()
         self.bot = bot
