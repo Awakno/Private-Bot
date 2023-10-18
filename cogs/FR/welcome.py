@@ -61,6 +61,10 @@ class Welcome(commands.Cog):
                     await welcome_channel.send(content=message,embed=embed)
                 else:
                     await welcome_channel.send(embed=embed)
+            else:
+                if config['welcome']['message']:
+                    message = formatter(f"{config['welcome']['message']}", member, member.guild)
+                    await welcome_channel.send(content=message)
 
 def setup(bot):
     bot.add_cog(Welcome(bot))

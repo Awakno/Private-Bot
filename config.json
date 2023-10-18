@@ -1,5 +1,5 @@
 {
-    "token": "TOKEN",
+    "token": "MTE2MjA0MDQxNDg2MjMyMzc3Mw.GEe2Sc.LDjDX2Wjba-R9SioG7vR7_TCLLnsY9SuKCdzoU",
     "prefix": "$",
     "lang": "fr",
     "statut": {
@@ -21,10 +21,10 @@
     },
      
     "welcome": {
-        "activate": "n",
-        "embeds": "y",
-        "channel": "CHANNEL ID",
-        "message": "Bienvenue {user.mention}",
+        "activate": "y",
+        "embeds": "n",
+        "channel": 1163191742435168438,
+        "message": "Bienvenue {user.mention} ! comment tu vas ?",
         "embed": {
             "title": "Bienvenue {user.name}",
             "description": "Bienvenue sur le serveur {guild.name}",
