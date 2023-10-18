@@ -24,16 +24,53 @@ Ce bot Discord personnalisé est un projet open-source conçu pour vous aider à
 
 ```json
 {
-    "token": "Your token",
+    "token": "TOKEN",
     "prefix": "$",
-    "lang": "en",
+    "lang": "fr",
     
+
     "owner": [
-        "Owner bot"
+        
     ],
-    "logs_channel": "Channel logs"
+    "logs": {
+        "activate": "n",
+        "channel": "channel ID"
+    },
+     
+    "welcome": {
+        "activate": "n",
+        "embeds": "y",
+        "channel": "CHANNEL ID",
+        "message": "Bienvenue {user.mention}",
+        "embed": { // Configuration du embed
+            "title": "Bienvenue {user.name}",
+            "description": "Bienvenue sur le serveur {guild.name}",
+            "author": "Private-Bot",
+            "author_avatar": "",
+            "thumbnail": "{user.avatar}",
+                "fields": [
+                    {"name": "Example", "value": "Example", "inline": true}
+                    
+
+            ],
+            "footer": "Tu es notre {guild.membercount} membres",
+            "color": "#FF0000",
+            "footer-url": "{guild.icon}" 
+
+        }
+
+    }
 }
 ```
+
+# Variable
+Private-Bot possède un système de variable permettant d'avoir des données non constante
+exemple: "Bienvenue {user}"
+BOT: "Bienvenue utilisateur#0000"
+__Si vous voulez en savoir plus regarder le fichier variable.py !__
+
+
+
 ## Besoin d'aide ?
 Rejoins le support 
 "https://discord.gg/ZUFb892bdZ"
