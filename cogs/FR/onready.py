@@ -11,19 +11,26 @@ class OnReady(commands.Cog):
         print("Je suis sur les serveurs suivants:")
         for guild in self.bot.guilds:
             print(f"{guild.name} ({guild.id})")
-        try:
-            with open("presence.json", "r") as f:
-                presence_data = json.load(f)
-                activity_type = presence_data["activity_type"]
-                activity_name = presence_data["activity_name"]
-                activity = discord.Activity(name=activity_name, type=getattr(discord.ActivityType, activity_type.capitalize()))
-                await self.bot.change_presence(activity=activity)
-        except FileNotFoundError:
-            # Handle the case when the file doesn't exist
-            pass
+        with open("config.json","r") as f:
+            config = json.load(f)
+        """if config['statut']['playing'] == "y":
+            if config['statut']['text']:
+                await self.bot.change_presence(activity=discord.Game(name=config['statut']['text']))
+                return"""
+        if config['statut']['watching'] == "y":
+            if config['statut']['text']:
+                await self.bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=config['statut']['text']))
+                return
+        if config['statut']['listening'] == "y":
+            if config['statut']['text']:
+                await self.bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=config['statut']['text']))
 
-        # Set the bot's presence on startup
-        
+                return
+        if config['statut']['streaming'] == "y":
+            if config['statut']['url']:
+                if config['statut']['text']:
+                    await self.bot.change_presence(activity=discord.Streaming(name=config['statut']['text'], url=config['statut']['url']))
+                    return
         print("Prêt à aider !")
 
 
