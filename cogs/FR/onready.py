@@ -13,10 +13,10 @@ class OnReady(commands.Cog):
             print(f"{guild.name} ({guild.id})")
         with open("config.json","r") as f:
             config = json.load(f)
-        """if config['statut']['playing'] == "y":
+        if config['statut']['playing'] == "y":
             if config['statut']['text']:
                 await self.bot.change_presence(activity=discord.Game(name=config['statut']['text']))
-                return"""
+                return
         if config['statut']['watching'] == "y":
             if config['statut']['text']:
                 await self.bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=config['statut']['text']))
