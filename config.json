@@ -1,5 +1,5 @@
 {
-    "token": "MTE2MjA0MDQxNDg2MjMyMzc3Mw.Gk5rWC.CY9rlih8TioFBk75l6P5hMAFiLlJhS1m09yspg",
+    "token": "TOKEN",
     "prefix": "$",
     "lang": "fr",
     
@@ -8,11 +8,11 @@
         
     ],
     
-    "logs_channel": 1163404583377313845,
+    "logs_channel": "channel ID",
     "welcome": {
         "activate": "y",
         "embeds": "y",
-        "channel": 1163191742435168438,
+        "channel": "channel ID",
         "message": "Bienvenue {user.mention}",
         "embed": {
             "title": "Bienvenue {user.name}",
