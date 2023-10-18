@@ -2,11 +2,19 @@
     "token": "TOKEN",
     "prefix": "$",
     "lang": "fr",
-    
+    "statut": {
+        "playing": "n",
+        "watching": "n",
+        "listening": "n",
+        "streaming": "y",
+        "text": "The new update",
+        "url": "https://twitch.tv/awakno"
+    },
 
     "owner": [
         
     ],
+    
     "logs": {
         "activate": "n",
         "channel": "channel ID"
