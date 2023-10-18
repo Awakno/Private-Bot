@@ -31,6 +31,7 @@ class Welcome(commands.Cog):
             thumbnail = formatter(f"{config['welcome']['embed']['thumbnail']}", member, member.guild)
             footer = formatter(f"{config['welcome']['embed']['footer']}", member, member.guild)
             footer_url = formatter(f"{config['welcome']['embed']['footer-url']}", member, member.guild)
+            img = formatter(f"{config['welcome']['embed']['image']}", member, member.guild)
             color= hex_to_discord_color(config['welcome']['embed']['color'])
             if config['welcome']['embeds'] == "y":
                 
@@ -56,6 +57,8 @@ class Welcome(commands.Cog):
                     embed.set_footer(text=footer)
                 if color:
                     embed.color = color
+                if img:
+                    embed.set_image(url=img)
                 if config['welcome']['message']:
                     message = formatter(f"{config['welcome']['message']}", member, member.guild)
                     await welcome_channel.send(content=message,embed=embed)
