@@ -62,6 +62,15 @@ Ce bot Discord personnalisé est un projet open-source conçu pour vous aider à
     }
 }
 ```
+
+# Variable
+Private-Bot possède un système de variable permettant d'avoir des données non constante
+exemple: "Bienvenue {user}"
+BOT: "Bienvenue utilisateur#0000"
+__Si vous voulez en savoir plus regarder le fichier variable.py !__
+
+
+
 ## Besoin d'aide ?
 Rejoins le support 
 "https://discord.gg/ZUFb892bdZ"
