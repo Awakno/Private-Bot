@@ -11,7 +11,7 @@ class OnReady(commands.Cog):
         print("Je suis sur les serveurs suivants:")
         for guild in self.bot.guilds:
             print(f"{guild.name} ({guild.id})")
-        with open("config.json","r") as f:
+        with open("config.json","r",encoding="utf-8") as f:
             config = json.load(f)
         if config['statut']['playing'] == "y":
             if config['statut']['text']:

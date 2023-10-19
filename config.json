@@ -6,9 +6,9 @@
         "playing": "n",
         "watching": "n",
         "listening": "n",
-        "streaming": "y",
-        "text": "The new update",
-        "url": "https://twitch.tv/awakno"
+        "streaming": "n",
+        "text": "Status",
+        "url": "https://twitch.tv/x"
     },
 
     "owner": [
@@ -27,6 +27,30 @@
         "message": "Bienvenue {user.mention} ! comment tu vas ?",
         "embed": {
             "title": "Bienvenue {user.name}",
+            "description": "Bienvenue sur le serveur {guild.name}",
+            "author": "Private-Bot",
+            "author_avatar": "",
+            "image" : "",
+            "thumbnail": "{user.avatar}",
+                "fields": [
+                    {"name": "Example", "value": "Example", "inline": true}
+                    
+
+            ],
+            "footer": "Tu es notre {guild.membercount} membres",
+            "color": "#FF0000",
+            "footer-url": "{guild.icon}" 
+
+        }
+
+    },
+    "leave": {
+        "activate": "n",
+        "embeds": "n",
+        "channel": "channel ID",
+        "message": "Au revoir {user.name} :cry:",
+        "embed": {
+            "title": "Au revoir {user.name}",
             "description": "Bienvenue sur le serveur {guild.name}",
             "author": "Private-Bot",
             "author_avatar": "",
