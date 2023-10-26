@@ -7,7 +7,7 @@ def formatter(message,membre: discord.Member=None, server=None):
             "{user}": str(membre),
             "{user.id}": str(membre.id),
             "{user.display_name}": str(membre.display_name),
-            "{user.avatar}": str(membre.display_avatar),
+            "{user.avatar}": str(membre.display_avatar.url),
             "{user.mention}": str(membre.mention),
             "{user.name}": str(membre.name),
             "{user.badges}": str(membre.public_flags.all()),
