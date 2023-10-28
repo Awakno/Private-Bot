@@ -14,9 +14,9 @@ class kick(commands.Cog):
             await member.kick(reason=reason)
         except:
             return await ctx.reply("Je n'ai pas la permission d'expulser ce membre")
-        await ctx.send(f"{member} a bien été banni")
+        await ctx.send(f"{member} a bien été expulsé")
         try:
-            await member.send(f"Tu as été expulser de {ctx.guild.name} pour {reason} par {ctx.author}")
+            await member.send(f"Tu as été expulsé de {ctx.guild.name} pour {reason} par {ctx.author}")
         except:
             pass
 
