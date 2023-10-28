@@ -4,10 +4,10 @@
     "lang": "fr",
     "statut": {
         "playing": "n",
-        "watching": "n",
+        "watching": "y",
         "listening": "n",
         "streaming": "n",
-        "text": "Status",
+        "text": "Powered by Private-Bot",
         "url": "https://twitch.tv/x"
     },
 
@@ -18,6 +18,12 @@
     "logs": {
         "activate": "n",
         "channel": "channel ID"
+    },
+    "tempo-vocal":{
+        "activate": "y",
+        "hub": "channel ID",
+        "categories": "channel id",
+        "names": "salon de {user.name}"
     },
      
     "welcome": {
@@ -45,9 +51,9 @@
 
     },
     "leave": {
-        "activate": "n",
+        "activate": "y",
         "embeds": "n",
-        "channel": "channel ID",
+        "channel": 1163191742435168438,
         "message": "Au revoir {user.name} :cry:",
         "embed": {
             "title": "Au revoir {user.name}",
