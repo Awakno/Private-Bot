@@ -8,10 +8,11 @@ class Ban(commands.Cog):
 
     @commands.command(name="ban", description="Allows banning a member")
     async def ban(self, ctx, member: discord.Member=None, *, reason="No reason provided"):
+        prefix = self.bot.command_prefix
         if not ctx.author.guild_permissions.ban_members:
             return await ctx.send("You do not have permission to ban a member")
         if not member:
-            return await ctx.reply("Syntax: `$ban <member> [<reason>]`")
+            return await ctx.reply(f"Syntax: `{prefix}ban <member> [<reason>]`")
         try:
             await member.ban(reason=reason)
         except:

@@ -6,10 +6,11 @@ class kick(commands.Cog):
         self.bot = bot
     @commands.command(name="kick",description="Permet de kicker un membre")
     async def kick(self, ctx, member: discord.Member=None, *, reason="Aucune raison fournie"):
+        prefix = self.bot.command_prefix
         if not ctx.author.guild_permissions.kick_members:
             return await ctx.send("Vous n'avez pas la permission d'expulser un membre")
         if not member:
-            return await ctx.reply("Synthaxe: `$kick <membre> [<raison>]`")
+            return await ctx.reply(f"Synthaxe: `{prefix}kick <membre> [<raison>]`")
         try:
             await member.kick(reason=reason)
         except:
