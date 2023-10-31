@@ -7,7 +7,7 @@ class Avatar(commands.Cog):
 
     @commands.command(name="avatar")
     async def avatar(self, ctx, member: discord.Member = None):
-        if not member:
+        if member is None:
             member = ctx.author
         await ctx.send(embed=discord.Embed(title=f"🖼️ {member.name}'s Avatar").set_image(url=member.display_avatar.url))
 
