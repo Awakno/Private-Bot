@@ -19,9 +19,9 @@ class Admin(commands.Cog):
             with open("config.json", "w") as f:
                 json.dump(config, f, indent=4)
 
-            await ctx.send(f"Préfix changed ! new prefix is : `{prefix}`")
+            await ctx.send(f"Prefix updated ! New prefix: `{prefix}`")
         else:
-            await ctx.send("You are not owner of bot", delete_after=3)
+            await ctx.send("You're not one of the bot owners", delete_after=3)
     
 def setup(bot):
     bot.add_cog(Admin(bot))
