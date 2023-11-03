@@ -1,16 +1,12 @@
 import os
 
 try:
-    print("L'installation est en cours")
-    os.system("pip install -r requirements.txt")
     try:
         import discord
-        print("Succes !")
     except:
-        print("Une erreur a eu lieux durant l'importation !")
+        os.system("pip install -r requirements.txt")
 except Exception as e:
-    print("Une erreur a eu lieux durant l'installation !")
-    print(e)
+    print(f"Une erreur est survenue: {e}")
 
 print("Voulez vous lancer le bot ? [o/n]")
 reponse = input('>>> ')
