@@ -15,7 +15,7 @@ class LogEvents(commands.Cog):
         log_channel = self.bot.get_channel(self.log_channel_id)
         if log_channel:
             embed = discord.Embed(timestamp=datetime.now())
-            embed.add_field(name="Bot is online", value=f">>> Connected as: {self.bot.user} ({self.bot.user.id})")
+            embed.add_field(name="Bot online", value=f">>> Connected as: {self.bot.user} ({self.bot.user.id})")
             await log_channel.send(embed=embed)
 
     @commands.Cog.listener()
