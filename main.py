@@ -17,6 +17,7 @@ lang = lang.upper()
 list_lang = []
 
 for folder in os.listdir("./cogs/"):
+    folder = folder.upper()
     list_lang.append(folder)
 
 if lang in list_lang:
