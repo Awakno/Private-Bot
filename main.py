@@ -12,8 +12,7 @@ bot = commands.Bot(
     command_prefix=config['prefix'],
     intents=discord.Intents.all()
     )
-lang = config['lang']
-lang = lang.upper()
+lang = config['lang'].upper()
 list_lang = []
 
 for folder in os.listdir("./cogs/"):
