@@ -27,26 +27,65 @@ Ce bot Discord personnalisé est un projet open-source conçu pour vous aider à
     "token": "TOKEN",
     "prefix": "$",
     "lang": "fr",
-    
+    "statut": {
+        "playing": "n",
+        "watching": "y",
+        "listening": "n",
+        "streaming": "n",
+        "text": "Powered by Private-Bot",
+        "url": "https://twitch.tv/x"
+    },
 
     "owner": [
         
     ],
+    
     "logs": {
         "activate": "n",
         "channel": "channel ID"
     },
+    "tempo-vocal":{
+        "activate": "y",
+        "hub": "channel ID",
+        "categories": "channel id",
+        "names": "salon de {user.name}"
+    },
      
     "welcome": {
         "activate": "n",
-        "embeds": "y",
-        "channel": "CHANNEL ID",
-        "message": "Bienvenue {user.mention}",
-        "embed": { // Configuration du embed
+        "embeds": "n",
+        "channel": "channel ID",
+        "message": "Bienvenue {user.mention} ! comment tu vas ?",
+        "embed": {
             "title": "Bienvenue {user.name}",
             "description": "Bienvenue sur le serveur {guild.name}",
             "author": "Private-Bot",
             "author_avatar": "",
+            "image" : "",
+            "thumbnail": "{user.avatar}",
+                "fields": [
+                    {"name": "Example", "value": "Example", "inline": true}
+                    
+
+            ],
+            "footer": "Tu es notre {guild.membercount} membres",
+            "color": "#FF0000",
+            "footer-url": "{guild.icon}" 
+
+        }
+
+    },
+    "leave": {
+        "activate": "y",
+        "embeds": "n",
+        "channel": 1163191742435168438,
+        "message": "Au revoir {user.name} :cry:",
+        "embed": { // Configuration du embed
+            "title": "Au revoir {user.name}",
+            "description": "Bienvenue sur le serveur {guild.name}",
+            "author": "Private-Bot",
+            "author_avatar": "",
+            "image" : "",
             "thumbnail": "{user.avatar}",
                 "fields": [
                     {"name": "Example", "value": "Example", "inline": true}
