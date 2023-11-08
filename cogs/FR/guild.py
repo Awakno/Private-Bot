@@ -39,5 +39,6 @@ class UserInfo(commands.Cog):
         embed.add_field(name="Statistiques", value=f">>> :busts_in_silhouette: {ctx.guild.member_count} membres \n :robot: {bot_count} bots", inline=False)
         embed.add_field(name="Salons", value=f">>> :hash: {len(ctx.guild.text_channels)} salons écrit\n :loud_sound: {len(ctx.guild.voice_channels)} salons vocaux\n :video_game: {len(ctx.guild.categories)} catégories", inline=False)
         await ctx.send(embed = embed)
-def setup(bot):
-    bot.add_cog(UserInfo(bot))
+
+async def setup(bot):
+    await bot.add_cog(UserInfo(bot))

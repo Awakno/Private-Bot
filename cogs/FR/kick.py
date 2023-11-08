@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-class kick(commands.Cog):
+class Kick(commands.Cog):
     def __init__(self, bot):
         super().__init__()
         self.bot = bot
@@ -21,5 +21,5 @@ class kick(commands.Cog):
         except:
             pass
 
-def setup(bot):
-    bot.add_cog(kick(bot))
+async def setup(bot):
+    await bot.add_cog(Kick(bot))

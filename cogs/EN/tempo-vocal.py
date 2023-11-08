@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import json
 from variable import formatter
-class TempoVocal(discord.Cog):
+class TempoVocal(commands.Cog):
     def __init__(self,bot) -> None:
         super().__init__()
         self.bot = bot
@@ -32,5 +32,5 @@ class TempoVocal(discord.Cog):
 
 
 
-def setup(bot):
-    bot.add_cog(TempoVocal(bot))
+async def setup(bot):
+    await bot.add_cog(TempoVocal(bot))

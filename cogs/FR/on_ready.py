@@ -1,19 +1,18 @@
 import discord
 from discord.ext import commands
 import json
-
-
 class OnReady(commands.Cog):
     def __init__(self,bot):
         super().__init__()
         self.bot = bot
+        
     @commands.Cog.listener()
     async def on_ready(self):
-        print(f"Connected as: {self.bot.user}({self.bot.user.id})")
-        print("I'm on servers:")
+        print(f"Connectés en tant que: {self.bot.user}({self.bot.user.id})")
+        print("Je suis sur les serveurs suivants:")
         for guild in self.bot.guilds:
             print(f"{guild.name} ({guild.id})")
-        with open("config.json","r") as f:
+        with open("config.json","r",encoding="utf-8") as f:
             config = json.load(f)
         if config['statut']['playing'] == "y":
             if config['statut']['text']:
@@ -33,9 +32,8 @@ class OnReady(commands.Cog):
                 if config['statut']['text']:
                     await self.bot.change_presence(activity=discord.Streaming(name=config['statut']['text'], url=config['statut']['url']))
                     return
-        print("Ready to help !")
+        print("Prêt à aider !")
 
 
-def setup(bot):
-    bot.add_cog(OnReady(bot))
-            
+async def setup(bot):
+    await bot.add_cog(OnReady(bot))

@@ -5,6 +5,7 @@ class Admin(commands.Cog):
     def __init__(self,bot):
         super().__init__()
         self.bot = bot
+    
     @commands.command(name="setprefix")
     async def set_prefix(self, ctx, prefix):
         with open("config.json", "r") as f:
@@ -22,5 +23,5 @@ class Admin(commands.Cog):
         else:
             await ctx.send("Vous n'êtes pas owner du bot !", delete_after=3)
 
-def setup(bot):
-    bot.add_cog(Admin(bot))
+async def setup(bot):
+    await bot.add_cog(Admin(bot))

@@ -15,5 +15,5 @@ class Avatar(commands.Cog):
         await ctx.send(embed = discord.Embed(title=f"🖼️ Icon du serveur").set_image(url=ctx.guild.icon.url))
 
 
-def setup(bot):
-    bot.add_cog(Avatar(bot))
+async def setup(bot):
+    await bot.add_cog(Avatar(bot))

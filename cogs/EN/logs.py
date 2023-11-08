@@ -243,5 +243,5 @@ class LogEvents(commands.Cog):
             embed.set_footer(text=f"Server ID: {channel.guild.id}")
             await log_channel.send(embed=embed)
 
-def setup(bot):
-    bot.add_cog(LogEvents(bot))
+async def setup(bot):
+    await bot.add_cog(LogEvents(bot))

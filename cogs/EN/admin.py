@@ -23,5 +23,5 @@ class Admin(commands.Cog):
         else:
             await ctx.send("You're not one of the bot owners", delete_after=3)
     
-def setup(bot):
-    bot.add_cog(Admin(bot))
+async def setup(bot):
+    await bot.add_cog(Admin(bot))

@@ -69,5 +69,5 @@ class Leave(commands.Cog):
                     message = formatter(f"{config['leave']['message']}", member, member.guild)
                     await leave_channel.send(content=message)
 
-def setup(bot):
-    bot.add_cog(Leave(bot))
+async def setup(bot):
+    await bot.add_cog(Leave(bot))
