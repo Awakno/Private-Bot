@@ -23,5 +23,5 @@ class Ban(commands.Cog):
         except:
             pass
 
-def setup(bot):
-    bot.add_cog(Ban(bot))
+async def setup(bot):
+    await bot.add_cog(Ban(bot))

@@ -42,5 +42,5 @@ class UserInfo(commands.Cog):
         embed.add_field(name="Channels", value=f">>> :hash: {len(ctx.guild.text_channels)} text channels\n :loud_sound: {len(ctx.guild.voice_channels)} voice channels\n :video_game: {len(ctx.guild.categories)} categories", inline=False)
         await ctx.send(embed=embed)
 
-def setup(bot):
-    bot.add_cog(UserInfo(bot))
+async def setup(bot):
+    await bot.add_cog(UserInfo(bot))

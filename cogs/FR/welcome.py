@@ -69,5 +69,5 @@ class Welcome(commands.Cog):
                     message = formatter(f"{config['welcome']['message']}", member, member.guild)
                     await welcome_channel.send(content=message)
 
-def setup(bot):
-    bot.add_cog(Welcome(bot))
+async def setup(bot):
+    await bot.add_cog(Welcome(bot))
