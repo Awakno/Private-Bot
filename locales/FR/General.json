@@ -1,0 +1,9 @@
+{
+    "REQUESTED_BY": "Demandé par %{MEMBER_NAME}",
+    "NAME": "Nom",
+    "OWNER": "Propriétaire",
+    "STATS": "Statistiques",
+    "MEMBERS": "Membres",
+    "BOTS": "Robots",
+    "CHANNEL": "Canals"
+}

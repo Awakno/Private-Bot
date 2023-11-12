@@ -3,6 +3,11 @@ from discord.ext import commands
 import json
 from variable import formatter
 
+import i18n
+import os
+
+lang = os.environ["LANGUAGE"]
+
 def hex_to_discord_color(hex_color):
     hex_color = hex_color.lstrip('#')
     try:
@@ -10,7 +15,7 @@ def hex_to_discord_color(hex_color):
     except:
         return discord.Color.default()
 
-class Leave(commands.Cog):
+class Events(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -18,6 +23,7 @@ class Leave(commands.Cog):
     async def on_member_remove(self, member):
         with open("config.json","r",encoding="utf-8") as f:
             config = json.load(f)
+
         if config['leave']['activate'] == "y":
             leave_channel = self.bot.get_channel(int(config['leave']['channel']))
         else:
@@ -69,5 +75,32 @@ class Leave(commands.Cog):
                     message = formatter(f"{config['leave']['message']}", member, member.guild)
                     await leave_channel.send(content=message)
 
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print(f"{i18n.t('Events:CONNECTED_AS', locale=lang, ME=f'{self.bot.user} - ({self.bot.user.id})')}")
+        if(os.environ["LIST_SERVERS"] == "True"):
+            for guild in self.bot.guilds:
+                print(f"{guild.name} ({guild.id})")
+        with open("config.json","r") as f:
+            config = json.load(f)
+        if config['statut']['playing'] == "y":
+            if config['statut']['text']:
+                await self.bot.change_presence(activity=discord.Game(name=config['statut']['text']))
+                return
+        if config['statut']['watching'] == "y":
+            if config['statut']['text']:
+                await self.bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=config['statut']['text']))
+                return
+        if config['statut']['listening'] == "y":
+            if config['statut']['text']:
+                await self.bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=config['statut']['text']))
+
+                return
+        if config['statut']['streaming'] == "y":
+            if config['statut']['url']:
+                if config['statut']['text']:
+                    await self.bot.change_presence(activity=discord.Streaming(name=config['statut']['text'], url=config['statut']['url']))
+                    return
+
 async def setup(bot):
-    await bot.add_cog(Leave(bot))
+    await bot.add_cog(Events(bot))
