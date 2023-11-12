@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 import json
 from variable import formatter
-
 class TempoVocal(commands.Cog):
     def __init__(self,bot) -> None:
         super().__init__()
@@ -23,12 +22,14 @@ class TempoVocal(commands.Cog):
                     if before.channel:
                         if before.channel.name in formatter(config['tempo-vocal']['names'], member):
                             await before.channel.delete()
-                if not after.channel:
-                    print("hello")
+                if not after.channel:*
                     namess = formatter(config['tempo-vocal']['names'], member)
                     if before.channel.name in namess:
                         
                         await before.channel.delete()
+                
+
+
 
 async def setup(bot):
     await bot.add_cog(TempoVocal(bot))

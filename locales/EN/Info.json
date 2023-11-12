@@ -1,0 +1,9 @@
+{
+    "UI_DESCRIPTION": "Displays user information",
+    "SI_DESCRIPTION": "Displays server information",
+
+
+    "INFO_AUTHOR": "🖼️ %{MEMBER_OR_SERVER} Info | %{MEMBER_OR_SERVER2}",
+    "USER_JOINED": "Joined",
+    "USER_CREATED": "Account Created"
+}

@@ -1,0 +1,9 @@
+{
+    "KB_DESCRIPTION": "Allows %{KOB} a member",
+    "KB_SYNTAX": "Syntax: `%{PREFIX}%{KOB} <member> [<reason>]",
+    "KB_MISSING_PERMISSION": "You do not have permission to %{KOB} a member",
+    "KB_SUCCESS": "%{MEMBER} has been successfully %{KOB} !",
+    "KB_SUCCESS_MESSAGE": "You have been %{KOB} from %{GUILD} for %{REASON} by %{AUTHOR}",
+    
+    "SELF_MISSING_PERMISSION": "I do not have permission to %{KOB} this member"
+}

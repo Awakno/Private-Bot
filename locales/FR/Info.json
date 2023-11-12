@@ -1,0 +1,9 @@
+{
+    "UI_DESCRIPTION": "Afficher les informations de l'utilisateur",
+    "SI_DESCRIPTION": "Afficher les informations du serveur",
+
+
+    "INFO_AUTHOR": "🖼️ Info de %{MEMBER_OR_SERVER} | %{MEMBER_OR_SERVER2}",
+    "USER_JOINED": "Rejoint",
+    "USER_CREATED": "Compe Crée"
+}

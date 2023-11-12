@@ -1,0 +1,6 @@
+{
+    "USER": "🖼️ Avatar de %{MEMBER_NAME}",
+
+    "SERVER": "🖼️ Icône du serveur",
+    "SERVER_NO_ICON": "Ce serveur n'a pas d'icône."
+}
